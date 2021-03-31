@@ -29,7 +29,7 @@ To run the example, call ./run_example.sh at your bash prompt.
 
 A python utility script is included here, matchMotifToGenePerTF2.py, for organizing an inputinformation of motif regions mapped to genes (the first input to this program). The usage is as follows:
 ```
-python matchMotifToGenePerTF2.py <motif regions in .bed format> <tss list> <up stream window> <down stream window> <output list of mappings>
+python matchMotifToGenePerTF2.py <motif regions> <tss list> <upstream window> <downstream window> <output>
 ```
 
 Here the motif instances are anticipated in a format as follows:
