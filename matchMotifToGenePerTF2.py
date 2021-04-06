@@ -76,7 +76,6 @@ def writeTSS(outname,cmap,gmap,w_up,w_down):
 					if p1+w_down < mp1:
 						start=gI
 						continue
-						#start=gI
 					if p1-w_up > mp2:
 						break
 					if mp1 >= p1-w_up and mp2 <= p1+w_down:
@@ -86,7 +85,6 @@ def writeTSS(outname,cmap,gmap,w_up,w_down):
 					if p2+w_up < mp1:
 						start=gI
 						continue
-						#start=gI
 					if p2-w_down > mp2:
 						break
 					if mp1 >= p2-w_down and mp2 <= p2+w_up:
