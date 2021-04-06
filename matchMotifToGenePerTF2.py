@@ -23,12 +23,18 @@ def readGenes(inname):
 	f = open(inname,'r')
 	for l in f:
 		#ENSMUST00000166088	chr10	75032585	75032585
+		#if using assymetric window there should be a final column with the + or - strand orientation of the given TSS. 
+        	#otherwise a symmetric window is assumed and for the purposes of coordinates a + strand orientation will be assigned.
+		#in the case of symmetric window mapping this should not change results for genes that that are + or - strand as long as the input coordinates are correct. 
 		parts = l.strip().split('\t')
 		g  = parts[0]
 		c  = parts[1]
 		p1 = int(float(parts[2]))
 		p2 = int(float(parts[3]))
-		strand=parts[4]
+		if(len(parts)==5):
+			strand=parts[4]
+		else:
+			strand="+"
 		gs = gmap.get(c,[])
 		gs.append((g,p1,p2,strand))
 		gmap[c] = gs
